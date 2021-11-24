@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # kudos: https://www.geeksforgeeks.org/mongodb-python-insert-update-data/
 
 # Python code to illustrate
@@ -42,8 +43,9 @@ logger.info("estimated_document_count %s", collection.estimated_document_count()
 
 # unzip data.tar and access the folder it creates called BASIC, 
 # the sub zipped files will be decoded with the below code
-filelist = glob.glob('F:/betfair/horses/BASIC/**/*.bz2')
-logger.info('Number of files found =%s', len(filelist))
+filelist = glob.glob('/home/trent/data/BASIC/2016/**/*.bz2')
+#filelist = glob.glob('F:/betfair/horses/BASIC/**/*.bz2')
+logger.info('Number of files found=%s', len(filelist))
 
 def read_fun_generator(filename):
     with bz2.open(filename, 'rb') as f:

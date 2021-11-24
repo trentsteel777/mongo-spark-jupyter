@@ -3,3 +3,4 @@ blog/
 dump/
 data.csv
 *.log
+.ipynb_checkpoints

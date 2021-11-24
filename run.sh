@@ -37,14 +37,14 @@ rs.conf();
 
 '''
 
-
+echo '''
 ==============================================================================================================
 MongoDB Spark Demo
 
 Jypterlab
 '''
 
-docker exec -it jupyterlab  /opt/conda/bin/jupyter server list
+docker exec -it jupyterlab /opt/conda/bin/jupyter notebook list
 
 echo '''
 Spark Master - http://localhost:8080

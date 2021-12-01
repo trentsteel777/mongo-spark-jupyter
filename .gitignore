@@ -4,3 +4,6 @@ dump/
 data.csv
 *.log
 .ipynb_checkpoints
+nohup.out
+
+sample.csv

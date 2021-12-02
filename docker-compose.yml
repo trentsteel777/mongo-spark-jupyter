@@ -21,7 +21,12 @@ services:
       - 8888:8888
     volumes:
       - shared-workspace:/opt/workspace
+      # GCP VM
       - /home/trent/workspace/mongo-spark-jupyter/notebooks/:/home/jovyan/work
+
+      # laptop
+      #- /f/workspace/notebooks/:/home/jovyan/work
+      #- /f/betfair/:/home/jovyan/data
     networks:
       - localnet
 

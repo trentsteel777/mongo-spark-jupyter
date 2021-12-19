@@ -112,6 +112,26 @@ services:
       - "27019:27017"
     restart: always
 
+  # https://towardsdatascience.com/how-to-run-mysql-using-docker-ed4cebcd90e4
+  db:
+    #image: mariadb:10.7.1
+    #container_name: mariadb
+    image: mysql:5.7.36
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: analysis_db
+      MYSQL_USER: 'test'
+      MYSQL_PASS: 'pass'
+    networks:
+      - localnet
+    ports:
+      - "3306:3306"
+    volumes:
+      - /home/trent/database/:/var/lib/mysql
+      #- /f/database/:/var/lib/mysql
+
 networks:
     localnet:
         attachable: true

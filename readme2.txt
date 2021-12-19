@@ -1,8 +1,8 @@
 mySQL Commands:
   SELECT VERSION();
   select * from mysql.user;
-  CREATE USER 'test'@'localhost' IDENTIFIED BY 'pass';
-  GRANT ALL PRIVILEGES ON * . * TO 'test'@'localhost';
+  CREATE USER 'ssbd'@'%' IDENTIFIED BY 'pass';
+  GRANT ALL PRIVILEGES ON * . * TO 'ssbd'@'%';
   docker exec -it -u root mysql /bin/bash
   mysql -u root -p
   apt-get install libmysqlclient-dev

@@ -8,7 +8,6 @@ FROM jupyter/pyspark-notebook:1a66dd36ff82
 ARG conda_env=python37
 ARG py_ver=3.7.7
 
-
 #COPY --from=mambaorg/micromamba:0.17.0 "/home/${NB_USER}/mamba" "/home/${NB_USER}/mamba"
 #RUN wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/latest | tar -xvj bin/micromamba ./bin/micromamba shell init -s bash -p ~/micromamba
 #RUN source ~/.bashrc
@@ -44,3 +43,16 @@ ENV PATH "${CONDA_DIR}/envs/${conda_env}/bin:${PATH}"
 
 # if you want this environment to be the default one, uncomment the following line:
 ENV CONDA_DEFAULT_ENV ${conda_env}
+
+
+USER root
+RUN apt-get update -y && \
+    apt-get install -y libmysqlclient-dev
+
+USER jovyan
+RUN python -m pip install mysql-connector-python && \
+    pip install numpy && \ 
+    pip install pandas && \ 
+    pip install -U matplotlib && \ 
+    pip install seaborn && \
+    pip install plotly

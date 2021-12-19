@@ -1,5 +1,15 @@
-# find . -name \*.bz2 -exec bzip2 -d \{\} \;
+mySQL Commands:
+  SELECT VERSION();
+  select * from mysql.user;
+  CREATE USER 'test'@'localhost' IDENTIFIED BY 'pass';
+  GRANT ALL PRIVILEGES ON * . * TO 'test'@'localhost';
+  docker exec -it -u root mysql /bin/bash
+  mysql -u root -p
+  apt-get install libmysqlclient-dev
 
+
+
+# find . -name \*.bz2 -exec bzip2 -d \{\} \;
 
 Helpful commands:
   docker exec -it -u root jupyterlab /bin/bash

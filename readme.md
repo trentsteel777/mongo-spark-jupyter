@@ -2,6 +2,8 @@
 
 This repo was created to provide the infrastructure for our Group Assignment for module 'Storage Solutions in Big Data' as apart of our course Higher Diploma in Artificial Intelligence (part time).
 
+This readme aims to outline our infrastructure, deployment architecture and some development practices.
+
 ## Team members:
 Name          | Student No.
 ------------- | -------------

@@ -1,6 +1,6 @@
 # Storage Solutions for Big Data - Group Assignment
 
-This repo was created to provide the infrastructure for our Group Assignment for module 'Storage Solutions in Big Data' as apart of our course Higher Diploma in Artificial Intelligence (part time).
+This repo was created to provide the infrastructure for our Group Assignment for module 'Storage Solutions in Big Data' as a part of our course Higher Diploma in Artificial Intelligence (part time).
 
 This README aims to outline our infrastructure, deployment architecture and some development practices.
 

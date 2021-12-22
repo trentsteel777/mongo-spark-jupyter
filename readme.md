@@ -115,6 +115,26 @@ Betfair data files
 
 ![Image](images/betfair_files.png)
 
+# VS Code - IDE
+
+We installed our SSH keys into the GCP VM, both for our local machines and also GitHub.
+
+This allowed us to connect using VS Code to the GCP VM and do some remote development!
+
+We love using vim as much as the next Big Data expert but sometimes having a Graphical IDE at your disposal speeds things along and allows you to see more of the file system.
+
+In the image below you can see VS Code has used our SSH key to connect to GCP VM and we can see all the file system in /home/trent and from there access and edit any files.
+
+We also have the ability to open multiple terminals. In the bottom left you can see VS Code is connected via SSH.
+
+![Image](images/VSCode_GCP_VM.png)
+
+Because we added our GitHub SSH keys to the GCP VM, once we finished changing and tweaking our files we can easily commit and push them into our GitHub repo.
+
+![Image](images/VSCode_GCP_VM_GitHub.png)
+
+We changed our ~/.bashrc file to automatically add our GitHub SSH key when we open a new terminal. See the last few lines in the above screenshot.
+
 # Troubleshooting
 ## Image versions Issue
 
@@ -136,7 +156,7 @@ When we first started running the docker containers we only had two spark worker
 
 'networks' property for spark-worker-2 was missing from the config, so we added this is and gave it the value 'localnet', exactly like spark-worker-1, so now spark-worker-2 could talk to the rest of the containers on the docker network! After we did this update spark-worker-2 successfully connected to spark-master. 
 
-## SWAP MEMORY.
+## SWAP Memory
 
 When using loader.py to add the horse racing data into MongoDB the 32GB of RAM we had started getting fully and fully. At the time we had no assigned swap memory and from past experience we had been told if a machine exceeds its RAM and has no SWAP it will just crash. So while the RAM was getting fully we scrambled to add in some SWAP to prevent the machine crashing.
 
